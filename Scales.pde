@@ -1,11 +1,25 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
-  noLoop(); //stops the draw() function from repeating
+  size(400,400);
+  background(0, 4, 71);
 }
+
 void draw() {
-  //your code here
+  for(int s =1;s<=400;s=s+60){
+
+  for(int n = 1; n<=400; n = n+60){
+    fill(129, 134, 230);
+    scale(n,s);
+  }
+  }
 }
+
 void scale(int x, int y) {
-  //your code here
-}
+beginShape();
+vertex(x,y);
+vertex(50+x,y);
+vertex(50+x,50+y);
+vertex(25+x,60+y);
+vertex(x,50+y);
+endShape();
+  }
 
